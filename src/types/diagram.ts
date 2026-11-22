@@ -18,8 +18,12 @@ export interface ExcalidrawSceneData {
 }
 
 export interface OpenTab {
-  path: string;
-  name: string;
+  id: string;
+  title: string;
+  filePath: string;
+  sceneData: ExcalidrawSceneData;
+  lastSavedVersion: number;
+  currentVersion: number;
   isDirty: boolean;
-  sceneData: ExcalidrawSceneData | null;
+  lastSavedAt: number | null;
 }
